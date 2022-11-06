@@ -1,0 +1,15 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Planet",
+      "value": "Earth"
+    },
+    {
+      "trait_type": "Drink",
+      "value": "Good Dogg"
+    }
+  ],
+  "description": "Astronaut enjoying a drink at a tropical resort.",
+  "image": "ipfs://QmU3CgbzLi2eqP622oomSS1G5FiaBuTyZNntwexpi2rV5M",
+  "name": "Captain Cook"
+}
