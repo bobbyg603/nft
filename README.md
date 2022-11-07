@@ -2,23 +2,19 @@
 
 Deploy an [NFT](https://en.wikipedia.org/wiki/Non-fungible_token) to the [Ethereum](https://ethereum.org/en/) network with [Alchemy](https://alchemy.com/?r=0e755050924e15d3), [Hardhat](https://github.com/NomicFoundation/hardhat), [Metamask](https://metamask.io/), and [Pinata](https://www.pinata.cloud/). This example assumes you have a basic understanding of Node.js, Web3, and Ethereum Wallets.
 
-## Steps
+## 🥾 Steps 
 
 In the [Alchemy](https://alchemy.com/?r=0e755050924e15d3) Dashboard, hover over the **Apps** header, choose **+ Create App**, name the app **MyNFT** and select the **Goerli Test Network**.
 
 ![Create Alchemy App](./.assets/create-app.gif)
 
-Click the **GET TEST ETH** button or navigate to a [Goerli Faucet](https://goerlifaucet.com/). Enter your wallet address and click **Send Me ETH**.
+Click the **GET TEST ETH** button or navigate to the [Goerli Faucet](https://goerlifaucet.com/). Enter your wallet address and click **Send Me ETH**.
 
-```
-todo bg
-```
+![Goerli Faucet](./.assets/faucet.gif)
 
 Switch metamask to the Goerli Test Network and ensure that you received some test ETH.
 
-```
-todo bg
-```
+![Wallet Balance](./.assets/wallet-balance.png)
 
 Clone this repository
 
@@ -40,22 +36,18 @@ touch .env
 
 Copy the API url for your Alchemy app
 
-```
-todo bg
-```
+![API Url](./.assets/api-url.gif)
 
-Acquire the public and private keys for an address in your Metamask wallet and copy them
+Acquire the public and private keys for an address in your Metamask wallet and copy them.
 
-```
-todo bg
-```
+![Metamask Private Key](./.assets/metamask-private.gif)
 
-Add values for `API_URL`, `PUBLIC_KEY`, and `PRIVATE_KEY` to your `.env` file
+Add values for `API_URL`, `PUBLIC_KEY`, and `PRIVATE_KEY` to your `.env` file by replacing the values in quotes below.
 
 ```
-API_URL="https://eth-goerli.g.alchemy.com/v2/your-api-key"
-PUBLIC_KEY="0x011f237a81C9B26c2Ea96610c60cd4bB9E1e2abd"
-PRIVATE_KEY="{{redacted}}"
+API_URL="https://eth-goerli.g.alchemy.com/v2/{{ your API key }}"
+PUBLIC_KEY="{{your public key}}"
+PRIVATE_KEY="{{your private key}}"
 ```
 
 Deploy the contract to the Goerli Test Network
@@ -86,19 +78,13 @@ Copy the `CID` value of the image you uploaded to Pinata. Edit the `nft-metadata
 }
 ```
 
-Upload `nft-metadata.json` to Pinata.
-
-```
-todo bg
-```
-
-Modify `scripts/mint-nft.ts` and replace the value being used to call `mintNFT` with the `CID` of your `nft-metadata.json` file
+Upload `nft-metadata.json` to Pinata and copy it's `CID`. Modify `scripts/mint-nft.ts` and replace the string value being used to call `mintNFT` with the `CID` of your `nft-metadata.json` file
 
 ```ts
 mintNFT("ipfs://{{ Replace with your nft-metadata.json CID }}");
 ```
 
-Mint your NFT (!)
+Mint your NFT
 
 ```sh
 ts-node scripts/mint-nft
@@ -106,13 +92,16 @@ ts-node scripts/mint-nft
 
 Find your NFT's contract by searching your public address in [goerli.etherscan.io](https://goerli.etherscan.io/) and clicking the link that says **Contract Creation**. Copy the contract's address.
 
-```
-todo bg
-```
+![Etherscan Contract Address](./.assets/contract-address.gif)
 
 Add your NFT to your Metamask wallet, note that you can only see NFTs in the mobile wallet
 
-```
-todo bg
-```
+![Metamask Mobile Wallet](./.assets/wallet-nft.jpeg)
 
+Congratulations! 🎉🥳🙂
+
+You just deployed a new NFT contract and minted your first NFT! Now go do it on the Ethereum mainnet!
+
+## 🧑‍🏫 Additional Learning
+
+This tutorial was adapted from a tutorial on [ethereum.org](https://ethereum.org/). For a more in depth explanation of the topics covered above please check out this [article](https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/).
