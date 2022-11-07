@@ -6,15 +6,15 @@ Deploy an [NFT](https://en.wikipedia.org/wiki/Non-fungible_token) to the [Ethere
 
 In the [Alchemy](https://alchemy.com/?r=0e755050924e15d3) Dashboard, hover over the **Apps** header, choose **+ Create App**, name the app **MyNFT** and select the **Goerli Test Network**.
 
-![Create Alchemy App](./.assets/create-app.gif)
+<img alt="Create Alchemy App" width="720px" src="./.assets/create-app.gif">
 
 Click the **GET TEST ETH** button or navigate to the [Goerli Faucet](https://goerlifaucet.com/). Enter your wallet address and click **Send Me ETH**.
 
-![Goerli Faucet](./.assets/faucet.gif)
+<img alt="Goerli Faucet" width="720px" src="./.assets/faucet.gif">
 
 Switch metamask to the Goerli Test Network and ensure that you received some test ETH.
 
-![Wallet Balance](./.assets/wallet-balance.png)
+<img alt="Wallet Balance" width="360px" src="./.assets/wallet-balance.png">
 
 Clone this repository
 
@@ -36,11 +36,11 @@ touch .env
 
 Copy the API url for your Alchemy app
 
-![API Url](./.assets/api-url.gif)
+<img alt="API Url" width="720px" src="./.assets/api-url.gif">
 
 Acquire the public and private keys for an address in your Metamask wallet and copy them.
 
-![Metamask Private Key](./.assets/metamask-private.gif)
+<img alt="Metamask Private Key" width="320px" src="./.assets/metamask-private.gif">
 
 Add values for `API_URL`, `PUBLIC_KEY`, and `PRIVATE_KEY` to your `.env` file by replacing the values in quotes below.
 
@@ -60,7 +60,7 @@ npx hardhat --network goerli run scripts/deploy.js
 
 Upload an image to Pinata to use as your NFT. If you don't have one, you can generate an image for free using [DALL-E](https://labs.openai.com/).
 
-![Upload Image Pinata](./.assets/pinata.gif)
+<img alt="Upload Image Pinata" width="720px" src="./.assets/pinata.gif">
 
 Copy the `CID` value of the image you uploaded to Pinata. Edit the `nft-metadata.json` file and replace the value in the `image` property with the `CID` of the image you uploaded to Pinata.
 
@@ -92,11 +92,11 @@ ts-node scripts/mint-nft
 
 Find your NFT's contract by searching your public address in [goerli.etherscan.io](https://goerli.etherscan.io/) and clicking the link that says **Contract Creation**. Copy the contract's address.
 
-![Etherscan Contract Address](./.assets/contract-address.gif)
+<img alt="Etherscan Contract Address" width="720px" src="./.assets/contract-address.gif">
 
 Add your NFT to your Metamask wallet, note that you can only see NFTs in the mobile wallet
 
-![Metamask Mobile Wallet](./.assets/wallet-nft.jpeg)
+<img alt="Metamask Mobile Wallet" width="360px" src="./.assets/wallet-nft.jpeg">
 
 Congratulations! 🎉🥳🙂
 
